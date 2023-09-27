@@ -1,15 +1,6 @@
 <HTML>
 <HEAD>
 <TITLE> EJ2- Arrays unidimensionales</TITLE>
-<style>
-	table, td {
-		
-		border: 1px solid black;
-		border-collapse: collapse;
-	}
-
-
-</style>
 </HEAD>
 <BODY>
 
