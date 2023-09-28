@@ -30,7 +30,7 @@ for ($i = 0; $i <= 19; $i++){
 
 for ($i = 0; $i <= 19; $i++){
 	
-	$miArrayOctal[] = decoct($i);
+	$miArrayOctal[] = decoct($i); //decoct para convertir a octal
 	
 		
 }
