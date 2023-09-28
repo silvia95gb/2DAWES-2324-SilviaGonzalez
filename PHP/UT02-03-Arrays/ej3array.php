@@ -23,14 +23,14 @@ $miArrayOctal = array ();
 
 for ($i = 0; $i <= 19; $i++){
 	
-	$miArrayBinarios[] = decbin($i);
+	$miArrayBinarios[] = decbin($i); //convierto y almaceno en binario
 	
 		
 }
 
 for ($i = 0; $i <= 19; $i++){
 	
-	$miArrayOctal[] = decoct($i); //decoct para convertir a octal
+	$miArrayOctal[] = decoct($i); //convierto y almaceno en octal con decoct
 	
 		
 }
@@ -40,7 +40,6 @@ foreach ($miArrayBinarios as $numero) {
     echo $numero . " ";
 }
 
-//ahora tengo que convertirlos en binario
 
 echo "<br>";
 echo "<br>";
