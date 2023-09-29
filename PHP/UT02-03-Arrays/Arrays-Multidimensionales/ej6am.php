@@ -35,7 +35,6 @@ for ($i = 0; $i < 3; $i++){
 
 // Imprimimos matriz dentro de la tabla:
 
-
 echo "<table>";
 
 for ($i = 0; $i < 3; $i++){
@@ -49,6 +48,60 @@ for ($i = 0; $i < 3; $i++){
 	
 };
 echo "</table>";
+
+
+echo "<br>";
+
+//Creamos array para almacenar los maximos de cada fila
+
+$arrayMaximos = array();
+
+
+
+for ($i = 0; $i < 3; $i++){
+	
+	$maximoFila = $matriz[$i][0]; //iniciamos variable maximofila a la minima posicion de la matriz
+	
+	for ($j = 0; $j < 3; $j++){
+		
+		if ($matriz[$i][$j] > $maximoFila) {
+			
+			$maximoFila = $matriz[$i][$j];
+			
+		}
+		
+	}
+	$arrayMaximos[] = $maximoFila;
+}
+
+for ($i = 0; $i < 3; $i++){
+	
+	echo $arrayMaximos[$i]." ";
+	
+}
+
+echo "<br>";
+
+//Creamos array para almacenar los promedios de cada fila
+
+$arrayFilas = array ();
+$promedioFila = array ();
+
+
+for ($i = 0; $i < 3; $i++){
+	
+	 $arrayFilas[$i] = 0;
+	
+	for ($j = 0; $j < 3; $j++){
+		
+		$arrayFilas[$i]+=$matriz[$i][$j];
+	
+	}
+		$promedioFila = $arrayFilas[$i] / 3 ." "; //o count($matriz[$i])
+		echo $promedioFila;
+	
+};
+	
 
 ?>
 
