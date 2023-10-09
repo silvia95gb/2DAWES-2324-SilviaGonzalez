@@ -28,9 +28,9 @@
         return $numero1 / $numero2;
     }
 
-$operando1 = $_GET['operando1'];
-$operando2 = $_GET['operando2'];
-$operacion = $_GET['operacion'];
+$operando1 = $_POST['operando1'];
+$operando2 = $_POST['operando2'];
+$operacion = $_POST['operacion'];
 $resultado = 0;
 
 
