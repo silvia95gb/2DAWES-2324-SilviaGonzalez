@@ -6,24 +6,28 @@
     <BODY>
     <?php
 
-function transformarBase($numero,$baseInicial,$toBase){ //Parámetro genérico
+function test_input($data) { //funcion de 'limpiar'
+    $data = trim($data);
+    $data = htmlspecialchars($data); //en este ejercicio como necesitamos de \ quito la funcion striplashes !!
+    return $data;
+}
+function transformarBase($numero,$baseInicial,$toBase){ 
 
     return base_convert($numero, $baseInicial, $toBase);
 
 }
 
-$num = $_GET['num'];
+$num = test_input($_POST['num']);
 $num = substr($num, 0, strpos($num, "/"));
 
-$baseInicial = $_GET['num'];
+$baseInicial = test_input($_POST['num']);
 $baseInicial = substr($baseInicial, strpos($baseInicial, "/")+1);
 
-$nuevaBase = $_GET['nuevaBase'];
+$nuevaBase = test_input($_POST['nuevaBase']);
 
-$resultado = transformarBase($num,$baseInicial,$nuevaBase); //Llamada con tus variables a la función
+$resultado = transformarBase($num,$baseInicial,$nuevaBase); 
 
 echo "Numero ".$num." en base ".$baseInicial." = ".$resultado." en base ".$nuevaBase;
-
 
 
     ?>
