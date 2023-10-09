@@ -48,7 +48,7 @@ if ($operacion == "+"){
     $resultado = resta($operando1,$operando2);
 }elseif($operacion == "*"){
     $resultado = producto($operando1,$operando2);
-}elseif($operacion == "/"){
+}else{
     $resultado = division($operando1,$operando2);
 }
 
