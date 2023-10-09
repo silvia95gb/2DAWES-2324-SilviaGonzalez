@@ -16,6 +16,13 @@
 
     <?php
 
+    function test_input($data) { //funcion de 'limpiar'
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     function binario($num){
         return decbin($num);
     }
@@ -28,8 +35,8 @@
         return dechex($num);
     }
 
-    $num = $_GET['num'];
-    $operacion = $_GET['operacion'];
+    $num = $_POST['num'];
+    $operacion = test_input($_POST['operacion']);
 
 
 echo "El numero decimal es: <input type='text' name='num' value='$num' size='15'/>";
