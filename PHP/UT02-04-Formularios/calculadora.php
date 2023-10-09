@@ -1,12 +1,20 @@
 <HTML>
-    <HEAD>
-        <TITLE> EJ1 - FORMULARIOS</TITLE>
-        <meta charset="UTF-8">
-    </HEAD>
-    <BODY>
+
+<HEAD>
+    <TITLE> EJ1 - FORMULARIOS</TITLE>
+    <meta charset="UTF-8">
+</HEAD>
+
+<BODY>
     <h1>CALCULADORA</h1>
 
     <?php
+    function test_input($data) { //funcion de 'limpiar'
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+    return $data;
+  }
 
     function suma($numero1, $numero2){
 
@@ -28,9 +36,9 @@
         return $numero1 / $numero2;
     }
 
-$operando1 = $_POST['operando1'];
-$operando2 = $_POST['operando2'];
-$operacion = $_POST['operacion'];
+$operando1 = test_input($_POST['operando1']);
+$operando2 = test_input($_POST['operando2']);
+$operacion = test_input($_POST['operacion']);
 $resultado = 0;
 
 
@@ -48,8 +56,6 @@ echo "El resultado de la operación es: ".$operando1." ".$operacion." ".$operand
 
     
     ?>
-    </BODY>
-    </HTML>
+</BODY>
 
-    
-    
+</HTML>
