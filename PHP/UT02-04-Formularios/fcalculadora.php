@@ -34,8 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $operando2 = test_input($_POST['operando2']);
     $operacion = test_input($_POST['operacion']);
     $resultado = 0;
-}
-
 
 if ($operacion == "+"){
     $resultado = suma($operando1,$operando2);
@@ -48,8 +46,9 @@ if ($operacion == "+"){
 }
 
 echo "El resultado de la operación es: ".$operando1." ".$operacion." ".$operando2." = ".$resultado."";
-   
-   
+    
+}
+
     ?>
 </BODY>
 
