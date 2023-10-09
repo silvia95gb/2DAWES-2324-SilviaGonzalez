@@ -7,6 +7,13 @@
     <h1>IPs</h1>
     <?php
 
+    function test_input($data) { //funcion de 'limpiar'
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+        return $data;
+}
+
     function transformarBinario($numero){
 
         return decbin($numero);
@@ -35,7 +42,7 @@
         return $resultadoBinario;
     }
 
-    $ip = $_POST['ip'];
+    $ip = test_input($_POST['ip']);
     $resultadoBinario = convertir($ip);
     echo "<br>";
     echo "<br>";
