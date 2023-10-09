@@ -35,7 +35,7 @@
         return dechex($num);
     }
 
-    $num = $_POST['num'];
+    $num = test_input($_POST['num']);
     $operacion = test_input($_POST['operacion']);
 
 
