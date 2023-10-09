@@ -1,6 +1,6 @@
 <HTML>
     <HEAD>
-        <TITLE> EJ1 - FORMULARIOS</TITLE>
+        <TITLE> EJ2 - FORMULARIOS</TITLE>
         <meta charset="UTF-8">
     </HEAD>
     <BODY>
@@ -8,10 +8,22 @@
 
     <?php
 
-$numDecimal = $_GET['numDecimal'];
+function test_input($data) { //funcion de 'limpiar'
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+return $data;
+}
+
+function transformar($numero){
+
+    return decbin($numero);
+}
+
+$numDecimal = test_input($_POST['numDecimal']);
 $numBinario = "";
 
-$numBinario = decbin($numDecimal);
+$numBinario = transformar($numDecimal);
 
 
 echo "Numero Decimal: <input type='text' name='numDecimal' value='$numDecimal' size='15'/>";
