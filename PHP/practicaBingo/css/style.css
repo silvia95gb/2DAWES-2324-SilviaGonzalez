@@ -1,0 +1,42 @@
+table, tr, td {
+	border: 1px solid black; 
+	background-color: white; 
+	text-align:center; 
+	font-family: Tahoma;
+	border-collapse: collapse;
+	}
+   
+    body {
+    	background-color: white;
+    }
+	.acierto{
+		background-color: lightgreen;
+	}
+	.divcarton
+ 	{
+ 		float:left;
+ 		margin-left:20px;
+ 		margin-bottom: 80px;
+ 	}
+
+ 	.divjugador
+ 	{
+ 		float:left;
+ 		clear:right;
+ 		margin-right:50px;
+ 	}
+ 	.divtotal
+ 	{
+ 		float:left;
+ 		clear:right;
+ 		margin-left:200px;
+ 	}
+
+ 	.encabezado
+ 	{
+ 		background-color: lightpink;
+ 		font-weight:bold;
+ 	}
+ 	
+
+ 
